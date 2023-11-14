@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <style>
+        i {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>HR_Department_lab8</h1>
+
+<p><em><i>{{ student_info.name }}, {{ student_info.group }}</i></em></p>
+
+<h2>Projects</h2>
+<table border="1">
+    <tr>
+        <th>ProjectNumber</th>
+        <th>ProjectName</th>
+        <th>Deadline</th>
+        <th>Funding</th>
+    </tr>
+    {% for project in projects %}
+        <tr>
+            <td>{{ project.ProjectNumber }}</td>
+            <td>{{ project.ProjectName }}</td>
+            <td>{{ project.Deadline }}</td>
+            <td>{{ project.Funding }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>Positions</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Position ID</th>
+        <th>Position Name</th>
+        <th>Salary</th>
+        <th>Bonus Percentage</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for position in positions %}
+        <tr>
+            <td>{{ position.PositionID }}</td>
+            <td>{{ position.PositionName }}</td>
+            <td>{{ position.Salary }}</td>
+            <td>{{ position.BonusPercentage }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Departments</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+        <th>Phone Number</th>
+        <th>Room Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for department in departments %}
+        <tr>
+            <td>{{ department.DepartmentID }}</td>
+            <td>{{ department.DepartmentName }}</td>
+            <td>{{ department.PhoneNumber }}</td>
+            <td>{{ department.RoomNumber }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Employees</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Education</th>
+        <th>Department ID</th>
+        <th>Position ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for employee in employees %}
+        <tr>
+            <td>{{ employee.EmployeeID }}</td>
+            <td>{{ employee.LastName }}</td>
+            <td>{{ employee.FirstName }}</td>
+            <td>{{ employee.MiddleName }}</td>
+            <td>{{ employee.Address }}</td>
+            <td>{{ employee.Phone }}</td>
+            <td>{{ employee.Education }}</td>
+            <td>{{ employee.DepartmentID.DepartmentName }}</td>
+            <td>{{ employee.PositionID.PositionName }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Project Executions</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Execution ID</th>
+        <th>Project Number</th>
+        <th>Department ID</th>
+        <th>Start Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Проект1</td>
+        <td>IT</td>
+        <td>2023-09-25</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Проект2</td>
+        <td>Design</td>
+        <td>2023-08-05</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Проект3</td>
+        <td>HR</td>
+        <td>2023-07-10</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Проект4</td>
+        <td>Marketing</td>
+        <td>2023-06-20</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Проект5</td>
+        <td>Finance</td>
+        <td>2023-05-01</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Проект6</td>
+        <td>IT</td>
+        <td>2023-04-15</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Проект7</td>
+        <td>Design</td>
+        <td>2023-03-25</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
